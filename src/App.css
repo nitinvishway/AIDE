@@ -1,0 +1,34 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, sans-serif;
+  user-select: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+#drop-zone {
+  width: 100vw;
+  height: 100vh;
+  border-radius: 20px;
+  background: rgb(30, 30, 30);
+  backdrop-filter: blur(10px);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background 0.15s, border-color 0.15s;
+  box-sizing: border-box;
+}
+
+#drop-zone.drag-over {
+  background: rgba(60, 120, 255, 0.35);
+  border-color: rgba(120, 170, 255, 0.9);
+}
