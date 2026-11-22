@@ -17,7 +17,7 @@ from .retriever_ranker import HybridFileRetriever
 from .file_agent import FileAgent
 from .evals.eval_runner import FileIntelEvaluator
 
-app = FastAPI(title="AgentSix File Intelligence API", version="1.0.0")
+app = FastAPI(title="AIDE - Desktop File Intelligence API", version="1.0.0")
 
 # Enable CORS for desktop webviews and local dev ports
 app.add_middleware(
