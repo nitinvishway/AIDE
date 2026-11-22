@@ -1,0 +1,76 @@
+{
+  "benchmark_timestamp": "2026-11-22T13:07:53Z",
+  "evaluation_duration_seconds": 304.1,
+  "metrics": {
+    "MRR": 1.0,
+    "Precision@1": 1.0,
+    "Hit_Rate@3": 1.0,
+    "Faithfulness_Score": 0.6942,
+    "Hallucination_Risk": 0.3058,
+    "Schema_Adherence": 1.0
+  },
+  "retrieval_details": [
+    {
+      "query": "DBSCAN clustering and face embeddings",
+      "target_file": "face_pipeline.py",
+      "first_relevant_rank": 1,
+      "top_result_name": "face_pipeline.py",
+      "top_result_score": 28.19
+    },
+    {
+      "query": "window durability and always on top thread",
+      "target_file": "lib.rs",
+      "first_relevant_rank": 1,
+      "top_result_name": "lib.rs",
+      "top_result_score": 27.48
+    },
+    {
+      "query": "file crawler size sorting and scanning computer",
+      "target_file": "file_fetcher.py",
+      "first_relevant_rank": 1,
+      "top_result_name": "file_fetcher.py",
+      "top_result_score": 25.47
+    },
+    {
+      "query": "PDF OCR baidu Unlimited-OCR and whisper transcription",
+      "target_file": "dispatcher.py",
+      "first_relevant_rank": 1,
+      "top_result_name": "dispatcher.py",
+      "top_result_score": 28.29
+    },
+    {
+      "query": "drag and drop transparent react widget styling",
+      "target_file": "app.tsx",
+      "first_relevant_rank": 1,
+      "top_result_name": "README.md",
+      "top_result_score": 29.6
+    }
+  ],
+  "faithfulness_details": [
+    {
+      "query": "DBSCAN clustering and face embeddings",
+      "groundedness": 0.625,
+      "answer_preview": "### relevant information found in [face_pipeline.py](file:///d:/programming/1626/1626/py module/face_pipeline.py#l281-l2..."
+    },
+    {
+      "query": "window durability and always on top thread",
+      "groundedness": 0.613,
+      "answer_preview": "### relevant information found in [lib.rs](file:///d:/programming/1626/1626/src-tauri/src/lib.rs#l1261-l1273)\n\n> \"et win..."
+    },
+    {
+      "query": "file crawler size sorting and scanning computer",
+      "groundedness": 0.765,
+      "answer_preview": "### relevant information found in [file_fetcher.py](file:///d:/programming/1626/1626/py module/file_fetcher.py#l1-l14)\n\n..."
+    },
+    {
+      "query": "PDF OCR baidu Unlimited-OCR and whisper transcription",
+      "groundedness": 0.696,
+      "answer_preview": "### relevant information found in [dispatcher.py](file:///d:/programming/1626/1626/py module/dispatcher.py#l26-l33)\n\n> \"..."
+    },
+    {
+      "query": "drag and drop transparent react widget styling",
+      "groundedness": 0.773,
+      "answer_preview": "### relevant information found in [readme.md](file:///d:/programming/1626/1626/readme.md#l1-l12)\n\n> \"# agentsix - drag &..."
+    }
+  ]
+}

@@ -22,3 +22,17 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Tauri build & large binary/model artifacts
+src-tauri/target/
+src-tauri/binaries/
+src-tauri/models/*.gguf
+*.gguf
+*.exe
+*.dll
+*.pdb
+*.zip
+*.jsonl
+!file_intel/evals/eval_dataset.jsonl
+__pycache__/
+*.pyc
