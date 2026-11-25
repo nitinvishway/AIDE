@@ -2,7 +2,7 @@
 
 A private, on-device multimodal AI desktop copilot with two-stage hybrid search, behavioral personalization, and offline local LLM reasoning.
 
-[Releases](https://github.com/nitinvishway/AIDE/releases) | [Architecture](#architecture) | [Features](#key-features) | [Quick Start](#quick-start) | [Evaluation](#systematic-evaluation--benchmarks) | [API Reference](#api-reference)
+[Releases](https://github.com/nitinvishway/AIDE/releases) | [Screenshots](#interface-walkthrough) | [Architecture](#architecture) | [Features](#key-features) | [Quick Start](#quick-start) | [Evaluation](#systematic-evaluation--benchmarks) | [API Reference](#api-reference)
 
 ---
 
@@ -14,6 +14,29 @@ Unlike traditional desktop search tools that rely exclusively on filename matchi
 1. **Semantic Understanding**: Parses and semantically indexes text, PDFs, code, screenshots, and visual media.
 2. **Behavioral Personalization**: Re-ranks search results using interaction frequency, recency decay, and active workspace proximity.
 3. **On-Device LLM Dialogue**: Executes local inference with Google Gemma 2, supporting continuous multi-turn conversations and deep chain-of-thought ("Think Mode") reasoning grounded in local file context.
+
+---
+
+## Interface Walkthrough
+
+### 1. Non-Intrusive Floating Workspace Widget
+![AIDE Floating Widget over Browser](docs/images/floating-widget-workspace.jpg)
+
+AIDE stays pinned at a compact **175px fixed width** so it can float directly over active applications (such as a web browser, IDE, or document reader) without blocking content. In its collapsed Dark Mode state (`175 × 215 px`), the widget consists of two parts:
+* **Top Action Bar** (left to right):
+  1. **Attach File** *(Paperclip)*: Opens a native file picker to ingest PDFs, images, text, code, Word, or Excel files.
+  2. **Share** *(Share Nodes)*: Copies the active item's local file path to the clipboard.
+  3. **Think Mode** *(Brain)*: Toggles step-by-step chain-of-thought reasoning for local Gemma 2 responses.
+  4. **Document Chat** *(Chat Bubble)*: Expands or collapses the middle dialogue & hybrid search drawer (`175 × 415 px`).
+  5. **Theme Switcher** *(Moon / Layers)*: Switches between **Dark Mode** and translucent **Glass Mode**.
+* **Bottom Drop & Preview Zone** (`Drop here`): An always-ready intake target for files, dragged text/links, and clipboard captures.
+
+### 2. Live Drag-and-Drop & Clipboard Screenshot Ingestion
+![AIDE Drag-and-Drop and Screenshot Preview](docs/images/drag-drop-and-capture-preview.png)
+
+When dragging content onto the widget or taking a screenshot on Windows, AIDE immediately transitions into an active ingestion state:
+* **Drag-Over Highlight**: Dropping files, links, or text over the lower card activates a dashed blue border (`#60a5fa`) and subtle glow to confirm the drop target.
+* **Automatic Clipboard Screenshot Capture**: AIDE's Rust background listener detects new clipboard images (`screenshot_<timestamp>.png`), displays a live thumbnail inside the preview card, and tags it with a clickable bottom filename pill (with a live status dot). Clicking or double-clicking the preview opens the capture in your default OS viewer, while expanding **Document Chat** lets you immediately ask Gemma 2 questions about it or index it for future semantic search.
 
 ---
 
